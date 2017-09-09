@@ -1,0 +1,26 @@
+1. Explain why do we want sometimes to use setImmediate instead of using setTimeout ?
+
+
+setTimeoout will call the function after certain delay. They are stored in Timers phase of event loop. The function is executed after all the eventhandler queue is executed. It may take long time to execute the queue but setImmediate checks the queue of I/O event handlers and executes the callback soon after the I/O events are processed. setImmediate is stored in check phase of event loop. 
+
+
+2. Explain the difference between process.nextTick and setImmediate ?
+
+process.nextTick is not the part of event loop while the setImmediate is part of check phase on the event loop. All the callbacks in the nextTick queue is processed after the current opertaion completes and before the event loop continues while as setImmediate will schedule a callback to run at the the check phase of the event loop after IO events' callback.
+
+
+3. Name 10 global modules available in Node environment.
+
+module
+global
+process
+buffer
+require
+setInterval / ClearInterval
+setTimeout / ClearTimeout
+os
+path
+url
+util
+v8
+zlib
