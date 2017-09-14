@@ -1,0 +1,32 @@
+{
+	_id: '',
+	isbn: '',
+	author: '',
+	tags: ['tag1','tag2','tag3'],
+	burrowed: [
+		{studentName: '', returnDate: ''},
+		{studentName: '', returnDate: ''},
+		{studentName: '', returnDate: ''}
+	]
+
+}
+
+
+Books
+	ID
+	ISBN
+	Author
+	Keywords/Tags
+
+Author
+	ID
+	Name
+
+Students
+	ID
+	Name
+
+Burrowed
+	BookID
+	StudentID
+	ReturnDate
