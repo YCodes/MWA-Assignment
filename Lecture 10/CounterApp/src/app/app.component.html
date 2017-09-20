@@ -4,7 +4,7 @@
     Welcome to {{title}}!
     <br> App Component
   </h1>
-  <input [value]="componentCounterValue" #counterInput (keyup.enter)="setCounter(counterInput.value)">
+  <input [value]="componentCounterValue" #counterInput>
   <button (click)="setCounter(counterInput.value)">Set Value</button>
   <button (click)="setCounter(counterInput.value=0)">Reset Value</button>
 

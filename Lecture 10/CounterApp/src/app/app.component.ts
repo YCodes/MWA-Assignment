@@ -9,7 +9,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   title = 'Counter App';
   public componentCounterValue:number;
-  
+
     constructor() { 
       this.componentCounterValue=0;
     }

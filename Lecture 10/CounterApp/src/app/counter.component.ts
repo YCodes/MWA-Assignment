@@ -15,7 +15,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CounterComponent implements OnInit {
   title = 'Counter App';
   private counterValue;
-  
+
   constructor() { 
     this.counterValue = 0;
   }
@@ -24,12 +24,12 @@ export class CounterComponent implements OnInit {
   counterChange = new EventEmitter();
 
   increment(){
-    this.counterValue = this.counterValue+1;
+    this.counterValue++;
     this.counterChange.emit(this.counterValue);
   }
 
   decrement(){
-    this.counterValue = this.counterValue-1;
+    this.counterValue--;
     this.counterChange.emit(this.counterValue);
     return false;
   }
