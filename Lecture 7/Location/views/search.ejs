@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title><%= title %></title>
@@ -12,9 +12,27 @@
     <a href="/delete">Delete</a>
     <a href="/search">Search</a>
     <br><br>
+    <script>
+      navigator.geolocation.getCurrentPosition(success, fail);
+       
+      function success(position){
+       var lot = (position.coords.longitude);
+       var lat = (position.coords.latitude);
+
+       document.getElementById('longi').value= lot;
+       document.getElementById('lati').value= lat;
+       
+      }
+      
+      function fail(msg){
+        console.log(msg.code + msg.message);
+      }
+    </script>
     <form action="" method="post">      
             Category:<br>
             <input type="text" name="category" placeholder="Enter category">
+            <input type="hidden" id="longi" name="longi" value="">
+            <input type="hidden" id="lati" name="lati" value="">
             <br><br>
             <input type="submit" value="Submit">
     </form> 
@@ -35,6 +53,6 @@
            <% } %>
       </div>
     </div>
-   
+      
   </body>
 </html>
