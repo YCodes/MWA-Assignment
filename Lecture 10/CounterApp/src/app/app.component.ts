@@ -1,29 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
   title = 'Counter App';
-  private counterValue;
+  public componentCounterValue:number;
   
     constructor() { 
-      this.counterValue = 0;
+      this.componentCounterValue=0;
     }
-  
-    increment(){
-      this.counterValue = this.counterValue+1;
-      return false;
+
+    setCounter(val) {
+      if(!isNaN(val))
+        this.componentCounterValue = val;
     }
-  
-    decrement(){
-      this.counterValue = this.counterValue-1;
-      return false;
-    }
-    
-    reset(){
-      this.counterValue = 0;
+
+    updateCounterFromChild(val) {
+      this.componentCounterValue = val;
     }
 }

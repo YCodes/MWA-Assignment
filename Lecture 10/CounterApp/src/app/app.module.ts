@@ -13,6 +13,6 @@ import { CounterComponent } from './counter.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [CounterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
