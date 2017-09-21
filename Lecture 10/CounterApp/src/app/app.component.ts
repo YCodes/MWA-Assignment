@@ -18,8 +18,5 @@ export class AppComponent {
       if(!isNaN(val))
         this.componentCounterValue = val;
     }
-
-    updateCounterFromChild(val) {
-      this.componentCounterValue = val;
-    }
+    
 }

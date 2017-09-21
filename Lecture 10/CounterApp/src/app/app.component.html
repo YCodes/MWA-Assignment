@@ -8,6 +8,6 @@
   <button (click)="setCounter(counterInput.value)">Set Value</button>
   <button (click)="setCounter(counterInput.value=0)">Reset Value</button>
 
-  <app-counter [counterValue]="componentCounterValue" (counterChange)="updateCounterFromChild($event)"></app-counter>
+  <app-counter [counterValue]="componentCounterValue" (counterChange)="componentCounterValue=$event"></app-counter>
 
 </div>
